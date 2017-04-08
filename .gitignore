@@ -1,0 +1,7 @@
+__pycache__/
+.vagrant/
+.ssh/
+.vscode
+git/
+*.swp
+*.log

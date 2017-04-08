@@ -1,0 +1,11 @@
+[core]
+	editor = vim
+[user]
+	name = Kohányi Róbert
+	email = kohanyi.robert@gmail.com
+[push]
+	default = simple
+[filter ".minttyrc"]
+	clean = sed '/^ThemeFile=.*$/d'
+[i18n]
+	commitencoding = utf8
