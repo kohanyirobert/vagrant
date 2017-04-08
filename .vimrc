@@ -8,6 +8,7 @@ set laststatus=2
 set list
 set listchars=eol:$,tab:>-,trail:-
 set expandtab
+set virtualedit=all
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
