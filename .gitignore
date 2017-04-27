@@ -1,6 +1,7 @@
 __pycache__/
 .vagrant/
 .ssh/
+.aws/
 .vscode
 git/
 *.swp

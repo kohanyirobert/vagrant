@@ -9,7 +9,10 @@ sudo apt-get install -y python-pip
 sudo apt-get install -y python3-pip
 sudo apt-get install -y openjdk-8-jdk-headless
 sudo apt-get install -y tree
+sudo apt-get install -y jq
 sudo pip install pep8 autopep8
+sudo pip install awscli
+sudo pip install virtualenv
 sudo pip3 install pep8 autopep8
 sudo gem install asciidoctor
 sudo gem install coderay
@@ -29,6 +32,7 @@ do
   chmod -v u=rw,g=,o= ~/.ssh/$n
 done
 ln -fsv /vagrant/.gitconfig ~
+ln -fsv /vagrant/.aws ~
 if [ ! -d ~/.vim ]
 then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
