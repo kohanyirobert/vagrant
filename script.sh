@@ -10,6 +10,7 @@ sudo apt-get install -y python3-pip
 sudo apt-get install -y openjdk-8-jdk-headless
 sudo apt-get install -y tree
 sudo apt-get install -y jq
+sudo apt-get install -y ack-grep
 sudo pip install pep8 autopep8
 sudo pip install awscli
 sudo pip install virtualenv
