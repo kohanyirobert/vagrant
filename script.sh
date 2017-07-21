@@ -1,22 +1,35 @@
 sudo apt-get update
 sudo apt-get install -y python-software-properties
+sudo apt-get install -y apt-transport-https
+sudo apt-get install -y ca-certificates
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository -y ppa:git-core/ppa
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce
 sudo apt-get install -y vim-nox 
 sudo apt-get install -y git
-sudo apt-get install -y git-lfs
 sudo apt-get install -y python-pip
 sudo apt-get install -y python3-pip
 sudo apt-get install -y openjdk-8-jdk-headless
 sudo apt-get install -y tree
 sudo apt-get install -y jq
 sudo apt-get install -y ack-grep
-sudo pip install pep8 autopep8
+sudo apt-get install -y build-essential 
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libffi-dev
+sudo apt-get install -y python-dev
+sudo pip install pep8 
+sudo pip install autopep8
 sudo pip install awscli
 sudo pip install virtualenv
-sudo pip3 install pep8 autopep8
+sudo pip3 install pep8
+sudo pip3 install autopep8
 sudo gem install asciidoctor
 sudo gem install coderay
+# https://askubuntu.com/a/732999/10744
+sudo easy_install -U pip
+sudo pip install --upgrade pip
 curl -s https://get.sdkman.io | bash
 for f in ~/.ssh/*
 do
