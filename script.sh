@@ -3,6 +3,7 @@ sudo apt-get install -y python-software-properties
 sudo apt-get install -y apt-transport-https
 sudo apt-get install -y ca-certificates
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get update
@@ -19,6 +20,7 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-dev
+sudo apt-get install -y nodejs
 sudo pip install pep8 
 sudo pip install autopep8
 sudo pip install awscli
