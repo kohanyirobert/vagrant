@@ -22,6 +22,7 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-dev
 sudo apt-get install -y nodejs
+sudo apt-get install -y haskell-platform
 sudo apt-get install -y ubuntu-desktop
 sudo pip install pep8 
 sudo pip install autopep8
@@ -72,4 +73,5 @@ export SSH_AUTH_SOCK=$MY_SSH_AUTH_SOCK
 ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
 export SDKMAN_DIR=/home/ubuntu/.sdkman
 [[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
+export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
 EOF
