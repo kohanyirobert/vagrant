@@ -1,4 +1,4 @@
-sudo passwd ubuntu --delete
+echo 'ubuntu:ubuntu' | sudo chpasswd
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get install -y apt-transport-https
