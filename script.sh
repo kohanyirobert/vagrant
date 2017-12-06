@@ -22,7 +22,6 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-dev
 sudo apt-get install -y nodejs
-sudo apt-get install -y haskell-platform
 sudo apt-get install -y ubuntu-desktop
 sudo pip install pep8 
 sudo pip install autopep8
@@ -36,6 +35,7 @@ sudo gem install coderay
 sudo easy_install -U pip
 sudo pip install --upgrade pip
 curl -s https://get.sdkman.io | bash
+curl -sSL https://get.haskellstack.org/ | sh
 for f in ~/.ssh/*
 do
   n=$(basename $f)
