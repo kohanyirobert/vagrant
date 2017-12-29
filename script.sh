@@ -74,4 +74,5 @@ ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -n
 export SDKMAN_DIR=/home/ubuntu/.sdkman
 [[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
 export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
+export HISTCONTROL=ignoreboth:erasedups
 EOF
