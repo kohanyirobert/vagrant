@@ -31,6 +31,7 @@ sudo pip3 install pep8
 sudo pip3 install autopep8
 sudo gem install asciidoctor
 sudo gem install coderay
+sudo gem install github_cli
 # https://askubuntu.com/a/732999/10744
 sudo easy_install -U pip
 sudo pip install --upgrade pip
@@ -52,6 +53,7 @@ do
 done
 ln -fsv /vagrant/.gitconfig ~
 ln -fsv /vagrant/.aws ~
+ln -fsv /vagrant/.githubrc ~
 if [ ! -d ~/.vim ]
 then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
