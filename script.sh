@@ -22,7 +22,6 @@ sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-dev
 sudo apt-get install -y nodejs
-sudo apt-get install -y ubuntu-desktop
 sudo pip install pep8 
 sudo pip install autopep8
 sudo pip install awscli
