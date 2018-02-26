@@ -13,7 +13,7 @@ sudo apt-get install -y vim-nox
 sudo apt-get install -y git
 sudo apt-get install -y python-pip
 sudo apt-get install -y python3-pip
-sudo apt-get install -y openjdk-8-jdk-headless
+sudo apt-get install -y openjdk-9-jdk-headless
 sudo apt-get install -y tree
 sudo apt-get install -y jq
 sudo apt-get install -y ack-grep
