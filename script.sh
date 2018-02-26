@@ -53,6 +53,8 @@ done
 ln -fsv /vagrant/.gitconfig ~
 ln -fsv /vagrant/.aws ~
 ln -fsv /vagrant/.githubrc ~
+cp -fv /vagrant/.ghci ~
+chmod -v u=rw,g=,o= ~/.ghci
 if [ ! -d ~/.vim ]
 then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
