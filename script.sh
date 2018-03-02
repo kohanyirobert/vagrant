@@ -74,7 +74,7 @@ then
 fi
 export SSH_AUTH_SOCK=$MY_SSH_AUTH_SOCK
 ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
-export SDKMAN_DIR=/home/ubuntu/.sdkman
+export SDKMAN_DIR=/home/$USER/.sdkman
 [[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
 export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
 export HISTCONTROL=ignoreboth:erasedups
