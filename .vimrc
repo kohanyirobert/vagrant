@@ -16,4 +16,5 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tell-k/vim-autopep8'
 call vundle#end()
-filetype plugin indent on 
+filetype plugin indent on
+autocmd BufEnter *.hs set formatprg=hindent
