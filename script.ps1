@@ -7,6 +7,11 @@ New-Item -ItemType SymbolicLink -Value .mintty -Path (Join-Path $env:USERPROFILE
 New-Item -ItemType SymbolicLink -Value .aws -Path (Join-Path $env:USERPROFILE ".aws") -Force
 [IO.File]::WriteAllLines((Join-Path $env:USERPROFILE ".bash_profile"), @'
 MY_SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add &> /dev/null
+if [ $? -ne 0 ]
+then
+    rm $MY_SSH_AUTH_SOCK
+fi
 if [ ! -S $MY_SSH_AUTH_SOCK ]
 then
   eval $(ssh-agent -s)
