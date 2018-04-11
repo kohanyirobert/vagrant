@@ -18,4 +18,4 @@ then
 fi
 ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
 export HISTCONTROL=ignoreboth:erasedups
-'@) 
+'@)
