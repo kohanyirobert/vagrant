@@ -5,3 +5,4 @@ Locale=en_US
 Charset=UTF-8
 FontHeight=12
 BellType=0
+Term=xterm
