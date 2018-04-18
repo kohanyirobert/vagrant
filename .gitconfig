@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+	autocrlf = false
 [user]
 	name = Kohányi Róbert
 	email = kohanyi.robert@gmail.com
