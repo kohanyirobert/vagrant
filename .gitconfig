@@ -10,3 +10,11 @@
 	clean = sed '/^ThemeFile=.*$/d'
 [i18n]
 	commitencoding = utf8
+[diff]
+	tool = p4merge
+[difftool]
+	prompt = no
+[merge]
+	tool = p4merge
+[mergetool]
+	prompt = no
