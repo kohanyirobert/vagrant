@@ -9,6 +9,7 @@ set list
 set listchars=eol:$,tab:>-,trail:-
 set expandtab
 set virtualedit=all
+syntax on
 colorscheme default
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
