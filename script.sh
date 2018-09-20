@@ -62,7 +62,7 @@ if [ ! -d ~/.vim ]
 then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
-ln -fsv /vagrant/.vimrc ~
+ln -fsv /vagrant/.{,g}vimrc ~
 vim --not-a-term +BundleInstall +qall > /dev/null
 if [ ! -L ~/.tmux.conf ]
 then
