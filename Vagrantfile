@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "bento/ubuntu-18.04"
   config.vm.synced_folder ".", "/vagrant"
   config.vm.network "forwarded_port", guest: 80, host: 50080
   config.vm.network "forwarded_port", guest: 443, host: 50443
@@ -12,5 +12,6 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
     vb.customize ["guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--vram", "256"]
   end
 end

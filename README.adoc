@@ -13,5 +13,6 @@
 .. If an SSH key is named like __id_rsa__ or __id_rsaN__ (where _N_ is a number) it'll get picked up during Vagrant provisioning (see `script.sh` for more).
 . Run `script.cmd` which will link some config files into `%USERPROFILE%`, like `.minttyrc` and `.mintty`.
 .. Start `mintty` with _Run as administrator_. 
+. Install Vagrant's `vbguest` plugin with `vagrant plugin install vagrant-vbguest`.
 . Run `vagrant up`.
 . Edit `<PortableGit>\mingw64\etc\gitconfig` and change back `autocrlf` to `auto` if needed.

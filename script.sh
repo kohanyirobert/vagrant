@@ -1,4 +1,3 @@
-echo 'ubuntu:ubuntu' | sudo chpasswd
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get install -y apt-transport-https
@@ -19,13 +18,14 @@ sudo apt-get install -y python3-pip
 sudo apt-get install -y tree
 sudo apt-get install -y jq
 sudo apt-get install -y ack-grep
-sudo apt-get install -y build-essential 
+sudo apt-get install -y build-essential
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-dev
 sudo apt-get install -y nodejs
 sudo apt-get install -y mc
-sudo pip install pep8 
+sudo apt-get install -y --no-install-recommends ubuntu-desktop
+sudo pip install pep8
 sudo pip install autopep8
 sudo pip install awscli
 sudo pip install virtualenv
