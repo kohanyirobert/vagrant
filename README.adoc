@@ -15,4 +15,6 @@
 .. Start `mintty` with _Run as administrator_. 
 . Install Vagrant's `vbguest` plugin with `vagrant plugin install vagrant-vbguest`.
 . Run `vagrant up`.
+.. Lubuntu is kind of whacky. After the first `vagrant up` it won't be running, so do a `vagrant reload`.
+.. After this when showing the GUI in VBox the Lubuntu login screen will be shown, however the size of the screen won't change dynamically. Switch to fullscreen view, login, then logout and it'll be okay.
 . Edit `<PortableGit>\mingw64\etc\gitconfig` and change back `autocrlf` to `auto` if needed.

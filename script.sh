@@ -24,7 +24,8 @@ sudo apt-get install -y libffi-dev
 sudo apt-get install -y python-dev
 sudo apt-get install -y nodejs
 sudo apt-get install -y mc
-sudo apt-get install -y --no-install-recommends ubuntu-desktop
+sudo apt-get install -y lubuntu-desktop
+sudo snap install --classic vscode
 sudo pip install pep8
 sudo pip install autopep8
 sudo pip install awscli
