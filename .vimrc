@@ -17,7 +17,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tell-k/vim-autopep8'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 autocmd BufEnter *.hs set formatprg=hindent
+let g:bufExplorerDisableDefaultKeyMapping=1
+noremap <leader>b :ToggleBufExplorer<cr>
+noremap <leader>t :NERDTreeToggle<cr>
