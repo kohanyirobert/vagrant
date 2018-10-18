@@ -13,5 +13,6 @@ Vagrant.configure("2") do |config|
     vb.customize ["guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--vram", "256"]
+    vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
   end
 end
