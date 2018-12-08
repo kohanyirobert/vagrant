@@ -13,8 +13,6 @@ sudo apt install -y oracle-java9-installer
 sudo apt-get install -y docker-ce
 sudo apt-get install -y vim-nox 
 sudo apt-get install -y git
-sudo apt-get install -y python-pip
-sudo apt-get install -y python3-pip
 sudo apt-get install -y tree
 sudo apt-get install -y jq
 sudo apt-get install -y ack-grep
@@ -25,6 +23,12 @@ sudo apt-get install -y python-dev
 sudo apt-get install -y nodejs
 sudo apt-get install -y mc
 sudo apt-get install -y lubuntu-desktop
+sudo apt-get remove -y --auto-remove python-pip
+sudo apt-get remove -y --auto-remove python3-pip
+wget https://bootstrap.pypa.io/get-pip.py
+sudo -H -u vagrant python get-pip.py --user
+sudo -H -u vagrant python3 get-pip.py --user
+rm -vf get-pip.py
 sudo snap install --classic vscode
 sudo pip install pep8
 sudo pip install autopep8
@@ -37,7 +41,6 @@ sudo gem install coderay
 sudo gem install github_cli
 # https://askubuntu.com/a/732999/10744
 sudo easy_install -U pip
-sudo pip install --upgrade pip
 curl -s https://get.sdkman.io | bash
 curl -sSL https://get.haskellstack.org/ | sh
 for f in ~/.ssh/*
