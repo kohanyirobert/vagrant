@@ -6,12 +6,10 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get update
-echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | sudo debconf-set-selections
-sudo apt install -y oracle-java9-installer
+sudo apt-get install -y default-jdk
 sudo apt-get install -y docker-ce
-sudo apt-get install -y vim-nox 
+sudo apt-get install -y vim-nox
 sudo apt-get install -y git
 sudo apt-get install -y tree
 sudo apt-get install -y jq
