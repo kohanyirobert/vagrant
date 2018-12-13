@@ -7,7 +7,7 @@ New-Item -ItemType SymbolicLink -Value .minttyrc -Path (Join-Path $env:USERPROFI
 New-Item -ItemType SymbolicLink -Value .mintty -Path (Join-Path $env:USERPROFILE ".mintty") -Force
 New-Item -ItemType SymbolicLink -Value .aws -Path (Join-Path $env:USERPROFILE ".aws") -Force
 New-Item -ItemType SymbolicLink -Value .vimrc -Path (Join-Path $env:USERPROFILE ".vimrc") -Force
-New-Item -ItemType SymbolicLink -Value .vimrc -Path (Join-Path $env:USERPROFILE ".gvimrc") -Force
+New-Item -ItemType SymbolicLink -Value .gvimrc -Path (Join-Path $env:USERPROFILE ".gvimrc") -Force
 [IO.File]::WriteAllLines((Join-Path $env:USERPROFILE ".bash_profile"), @'
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add &> /dev/null
