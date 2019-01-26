@@ -21,4 +21,6 @@ then
 fi
 ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
 export HISTCONTROL=ignoreboth:erasedups
+alias jl='gpg --decrypt "$HOME/Google Drive/my.journal.gpg" 2>/dev/null'
+alias hl='hledger'
 '@)
