@@ -21,6 +21,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/rename'
 Plugin 'vim-scripts/confirm-quit'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 filetype plugin indent on
 autocmd BufEnter *.hs set formatprg=hindent
