@@ -22,7 +22,10 @@ fi
 ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
 export HISTCONTROL=ignoreboth:erasedups
 ENCRYPTED_JOURNAL="$HOME/Google Drive/my.journal.gpg"
+ENCRYPTED_TIMEDOT="$HOME/Google Drive/my.timedot.gpg"
 alias je='vim "$ENCRYPTED_JOURNAL"'
+alias te='vim "$ENCRYPTED_TIMEDOT"'
 alias jl='gpg --decrypt "$ENCRYPTED_JOURNAL" 2>/dev/null'
+alias tl='gpg --decrypt "$ENCRYPTED_TIMEDOT" 2>/dev/null'
 alias hl='hledger'
 '@)
