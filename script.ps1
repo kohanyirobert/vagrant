@@ -8,29 +8,5 @@ New-Item -ItemType SymbolicLink -Value .mintty -Path (Join-Path $env:USERPROFILE
 New-Item -ItemType SymbolicLink -Value .aws -Path (Join-Path $env:USERPROFILE ".aws") -Force
 New-Item -ItemType SymbolicLink -Value .vimrc -Path (Join-Path $env:USERPROFILE ".vimrc") -Force
 New-Item -ItemType SymbolicLink -Value .gvimrc -Path (Join-Path $env:USERPROFILE ".gvimrc") -Force
-[IO.File]::WriteAllLines((Join-Path $env:USERPROFILE ".bash_profile"), @'
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add &> /dev/null
-if [ $? -ne 0 ]
-then
-    rm $SSH_AUTH_SOCK
-fi
-if [ ! -S $SSH_AUTH_SOCK ]
-then
-  eval $(ssh-agent -s -a $SSH_AUTH_SOCK)
-fi
-ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
-export HISTCONTROL=ignoreboth:erasedups
-ENCRYPTED_JOURNAL="$HOME/Google Drive/my.journal.gpg"
-ENCRYPTED_TIMEDOT="$HOME/Google Drive/my.timedot.gpg"
-ENCRYPTED_TODOTXT="$HOME/Google Drive/todo.txt.gpg"
-alias je='vim "$ENCRYPTED_JOURNAL"'
-alias le='vim "$ENCRYPTED_TIMEDOT"'
-alias jl='gpg --decrypt "$ENCRYPTED_JOURNAL" 2>/dev/null'
-alias ll='gpg --decrypt "$ENCRYPTED_TIMEDOT" 2>/dev/null'
-alias hl='hledger'
-alias te='vim "$ENCRYPTED_TODOTXT"'
-alias ssh-copy-id-password-only='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAuthentication=no'
-alias ssh-password-only='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
-alias ssh-list-keys='for f in ~/.ssh/*.pub; do echo -e "$f \t $(ssh-keygen -l -E md5 -f $f)"; done'
-'@)
+New-Item -ItemType SymbolicLink -Value .bash_profile -Path (Join-Path $env:USERPROFILE ".bash_profile") -Force
+New-Item -ItemType SymbolicLink -Value .bash_profile.windows -Path (Join-Path $env:USERPROFILE ".bash_profile.windows") -Force

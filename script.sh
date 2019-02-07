@@ -70,20 +70,11 @@ if [ ! -L ~/.tmux.conf ]
 then
   ln -fsv /vagrant/.tmux.conf ~
 fi
-cat << 'EOF' > ~/.bash_profile
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add &> /dev/null
-if [ $? -ne 0 ]
+if [ ! -L ~/.bash_profile ]
 then
-    rm $SSH_AUTH_SOCK
+  ln -fsv /vagrant/.bash_profile ~
 fi
-if [ ! -S $SSH_AUTH_SOCK ]
+if [ ! -L ~/.bash_profile.vagrant ]
 then
-  eval $(ssh-agent -s -a $SSH_AUTH_SOCK)
+  ln -fsv /vagrant/.bash_profile.vagrant ~
 fi
-ssh-add -l | grep "The agent has no identities" && ssh-add $(find $HOME/.ssh/ -name id_rsa* -not -name id_rsa*.pub)
-export HISTCONTROL=ignoreboth:erasedups
-export SDKMAN_DIR=/home/$USER/.sdkman
-[[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
-export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
-EOF
