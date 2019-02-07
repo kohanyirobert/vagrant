@@ -38,5 +38,5 @@ let g:ledger_align_at=60
 let g:ledger_default_commodity='HUF'
 let g:ledger_commodity_before=0
 let g:ledger_commodity_sep=' '
-au FileType ledger inoremap <silent> <tab> <c-r>=ledger#autocomplete_and_align()<cr>
-au FileType ledger vnoremap <silent> <tab> :LedgerAlign<cr>
+autocmd filetype ledger inoremap <silent> <tab> <c-r>=ledger#autocomplete_and_align()<cr>
+autocmd filetype ledger vnoremap <silent> <tab> :LedgerAlign<cr>
