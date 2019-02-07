@@ -12,7 +12,7 @@ set virtualedit=all
 set visualbell
 syntax on
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -24,12 +24,15 @@ Plugin 'vim-scripts/confirm-quit'
 Plugin 'tpope/vim-surround'
 Plugin 'ledger/vim-ledger'
 Plugin 'jamessan/vim-gnupg'
+Plugin 'dbeniamine/todo.txt-vim'
 call vundle#end()
 filetype plugin indent on
-autocmd BufEnter *.hs set formatprg=hindent
+noremap <leader>o o<esc>
+noremap <leader>O O<esc>
+autocmd bufenter *.hs set formatprg=hindent
 let g:bufExplorerDisableDefaultKeyMapping=1
-noremap <leader>b :ToggleBufExplorer<cr>
-noremap <leader>t :NERDTreeToggle<cr>
+noremap <silent> <leader>b :ToggleBufExplorer<cr>
+noremap <silent> <leader>t :NERDTreeToggle<cr>
 let g:ledger_decimal_sep=' '
 let g:ledger_align_at=60
 let g:ledger_default_commodity='HUF'
