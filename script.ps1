@@ -30,4 +30,7 @@ alias jl='gpg --decrypt "$ENCRYPTED_JOURNAL" 2>/dev/null'
 alias ll='gpg --decrypt "$ENCRYPTED_TIMEDOT" 2>/dev/null'
 alias hl='hledger'
 alias te='vim "$ENCRYPTED_TODOTXT"'
+alias ssh-copy-id-password-only='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAuthentication=no'
+alias ssh-password-only='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
+alias ssh-list-keys='for f in ~/.ssh/*.pub; do echo -e "$f \t $(ssh-keygen -l -E md5 -f $f)"; done'
 '@)
