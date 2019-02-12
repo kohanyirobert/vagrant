@@ -41,9 +41,9 @@ let g:ledger_commodity_sep=' '
 autocmd filetype ledger inoremap <silent> <tab> <c-r>=ledger#autocomplete_and_align()<cr>
 autocmd filetype ledger vnoremap <silent> <tab> :LedgerAlign<cr>
 let g:Todo_txt_do_not_map=1
-autocmd fileType todo setlocal nofoldenable
+autocmd filetype todo setlocal nofoldenable
 autocmd filetype todo setlocal omnifunc=todo#Complete
 autocmd filetype todo setlocal completeopt-=preview
-autocmd filetype todo nmap <silent> <script> <buffer> <localleader>x <plug>DoToggleMarkAsDone<cr>
-autocmd filetype todo inoremap <silent> <script> <buffer> date<tab> <c-r>=strftime('%Y-%m-%d') <cr>
+autocmd filetype todo noremap <silent> <script> <buffer> <localleader>x :call todo#ToggleMarkAsDone('')<cr>
+autocmd filetype todo inoremap <silent> <script> <buffer> date<tab> <c-r>=strftime('%Y-%m-%d')<cr>
 autocmd filetype todo inoremap <silent> <script> <buffer> due<tab> due:<c-r>=strftime('%Y-%m-%d')<cr>
