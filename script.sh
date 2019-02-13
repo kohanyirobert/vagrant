@@ -55,6 +55,7 @@ do
   cp -fv $f ~/.ssh/$n
   chmod -v u=rw,g=,o= ~/.ssh/$n
 done
+ln -fsv /vagrant/.ssh/config ~/.ssh
 ln -fsv /vagrant/.gitconfig ~
 ln -fsv /vagrant/.aws ~
 ln -fsv /vagrant/.githubrc ~
