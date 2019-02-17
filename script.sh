@@ -79,3 +79,4 @@ if [ ! -L ~/.bash_profile.vagrant ]
 then
   ln -fsv /vagrant/.bash_profile.vagrant ~
 fi
+wget -O ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh

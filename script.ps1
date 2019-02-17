@@ -13,3 +13,4 @@ New-Item -ItemType SymbolicLink -Value .gvimrc -Path (Join-Path $env:USERPROFILE
 New-Item -ItemType SymbolicLink -Value .bash_profile -Path (Join-Path $env:USERPROFILE ".bash_profile") -Force
 New-Item -ItemType SymbolicLink -Value .bash_profile.windows -Path (Join-Path $env:USERPROFILE ".bash_profile.windows") -Force
 New-Item -ItemType SymbolicLink -Value mpv.conf -Path (Join-Path $env:APPDATA "mpv" | Join-Path -ChildPath "mpv.conf") -Force
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -OutFile (Join-Path $env:USERPROFILE ".git-prompt.sh")

@@ -21,3 +21,6 @@ if [ -f "$HOME/.bash_profile.vagrant" ]
 then
   source "$HOME/.bash_profile.vagrant"
 fi
+source ~/.git-prompt.sh
+export PROMPT_COMMAND='__git_ps1 "\u:\w" "\n\\\$ "'
+export GIT_PS1_SHOWCOLORHINTS=1
