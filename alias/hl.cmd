@@ -1,5 +1,5 @@
 @echo off
-set journal_file="%USERPROFILE%\Google Drive\my.journal.gpg"
+if [%encrypted_journal%] == [] echo Variable %%encrypted_journal%% must be set. && exit /b 1
 set new_codepage=65001
 rem Captures the output of the `chcp' command.
 for /f "tokens=* usebackq" %%a in (`chcp`) do (
@@ -12,6 +12,6 @@ for %%a in (%chcp_output%) do (
 rem Switches to Unicode, decrypts the journal, pass it to hledger
 rem then restores old codepage (even if previous commands failed).
 chcp %new_codepage% >nul 2>nul ^
-  && gpg --decrypt %journal_file% 2> nul ^
+  && gpg --decrypt %encrypted_journal% 2> nul ^
   | hledger -f- %* ^
   & chcp %old_codepage% >nul 2>nul
