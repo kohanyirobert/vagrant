@@ -1,4 +1,4 @@
-BoldAsFont=-1
+BoldAsFont=yes
 Transparency=off
 CursorType=block
 Locale=en_US
@@ -11,3 +11,4 @@ FontHeight=14
 Font=Fira Mono
 FontWeight=400
 FontIsBold=no
+FontSmoothing=default
