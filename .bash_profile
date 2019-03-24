@@ -13,6 +13,7 @@ export HISTCONTROL=ignoreboth:erasedups
 alias ssh-copy-id-password-only='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias ssh-password-only='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias ssh-list-keys='for f in ~/.ssh/*.pub; do echo -e "$f \t $(ssh-keygen -l -E md5 -f $f)"; done'
+alias mc='mc -b'
 if [ -f "$HOME/.bash_profile.windows" ]
 then
   source "$HOME/.bash_profile.windows"
