@@ -12,3 +12,4 @@ Font=Fira Mono
 FontWeight=400
 FontIsBold=no
 FontSmoothing=default
+BoldAsColour=no
