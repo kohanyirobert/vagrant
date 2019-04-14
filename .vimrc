@@ -5,6 +5,7 @@ set encoding=utf8
 set fileencoding=utf8
 set fileformat=unix
 set laststatus=2
+set ruler
 set list
 set listchars=eol:$,tab:>-,trail:-
 set expandtab
