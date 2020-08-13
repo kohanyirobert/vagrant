@@ -4,7 +4,5 @@ Out-File -FilePath $profile -InputObject @'
 Import-Module posh-sshell
 Import-Module posh-git
 Start-SshAgent
-Get-ChildItem ~/.ssh | Where-Object Name -Match '^id_rsa(\d+|_[^.]+)$' | ForEach-Object {
-  Add-SshKey $_.FullName
-}
+docker-machine env | Invoke-Expression
 '@
