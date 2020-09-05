@@ -15,4 +15,11 @@ Import-Module posh-sshell
 Import-Module posh-git
 Start-SshAgent
 Enable-Docker-Toolbox
+
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
+
+cd ~
 '@
