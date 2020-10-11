@@ -11,6 +11,15 @@ function Disable-Docker-Toolbox {
   del -ErrorAction Ignore env:\DOCKER_HOST
   del -ErrorAction Ignore env:\DOCKER_TOOLBOX_INSTALL_PATH
 }
+function Ssh-List-Keys {
+  (ls ~\.ssh\id_rsa_*.pub).Name -replace '^id_rsa_(.*)\.pub$','$1'
+}
+function Ssh-Switch-Key {
+  param ([string]$selector)
+  ssh-add -D
+  ssh-add ((ls ~\.ssh\id_rsa_*) `
+    | where {$_.Name -NotMatch '^id_rsa_.*\.pub$' -And $_.Name -Like "*${selector}*"})
+}
 Import-Module posh-sshell
 Import-Module posh-git
 Start-SshAgent
