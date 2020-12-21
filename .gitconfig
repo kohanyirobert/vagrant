@@ -18,3 +18,5 @@
 	tool = p4merge
 [mergetool]
 	prompt = no
+[pull]
+	ff = only
