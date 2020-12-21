@@ -5,6 +5,7 @@ __pycache__/
 .aws/
 .vscode
 git/
+.DS_Store
 *.swp
 *.log
 .githubrc
