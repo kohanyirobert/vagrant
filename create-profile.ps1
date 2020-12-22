@@ -27,6 +27,8 @@ Import-Module posh-ssh
 Import-Module posh-git
 Try-Enable-Docker-Toolbox
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadlineKeyHandler -Key Ctrl+LeftArrow -Function BackwardWord
+Set-PSReadlineKeyHandler -Key Ctrl+RightArrow -Function NextWord
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
