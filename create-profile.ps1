@@ -20,8 +20,8 @@ function Ssh-List-Keys {
 function Ssh-Switch-Key {
   param ([string]$selector)
   ssh-add -D
-  ssh-add -t 28800 ((ls ~\.ssh\id_rsa_*) `
-    | where {$_.Name -NotMatch '^id_rsa_.*\.pub$' -And $_.Name -Like "*${selector}*"})
+  ssh-add ((ls ~\.ssh\id_rsa_*) `
+    | where {$_.Name -NotMatch '^id_rsa_.*\.pub$' -And $_.Name -Like "*${selector}*"}).FullName
 }
 Import-Module posh-ssh
 Import-Module posh-git
