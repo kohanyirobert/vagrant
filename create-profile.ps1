@@ -27,6 +27,8 @@ Import-Module posh-ssh
 Import-Module posh-git
 Try-Enable-Docker-Toolbox
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadlineKeyHandler -Key Ctrl+v -Function Paste
+Set-PSReadlineKeyHandler -Key Shift+Insert -Function Paste
 Set-PSReadlineKeyHandler -Key Ctrl+LeftArrow -Function BackwardWord
 Set-PSReadlineKeyHandler -Key Ctrl+RightArrow -Function NextWord
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
