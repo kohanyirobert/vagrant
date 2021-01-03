@@ -10,6 +10,7 @@ New-Item -ItemType SymbolicLink -Value .aws -Path (Join-Path $env:USERPROFILE ".
 New-Item -ItemType SymbolicLink -Value .vimrc -Path (Join-Path $env:USERPROFILE ".vimrc") -Force
 New-Item -ItemType SymbolicLink -Value .gvimrc -Path (Join-Path $env:USERPROFILE ".gvimrc") -Force
 New-Item -ItemType SymbolicLink -Value .gvimrc -Path (Join-Path $env:USERPROFILE ".gvimrc") -Force
+New-Item -ItemType SymbolicLink -Value .emacs -Path (Join-Path $env:USERPROFILE ".emacs") -Force
 New-Item -ItemType SymbolicLink -Value .bash_profile -Path (Join-Path $env:USERPROFILE ".bash_profile") -Force
 New-Item -ItemType SymbolicLink -Value .bash_profile.windows -Path (Join-Path $env:USERPROFILE ".bash_profile.windows") -Force
 New-Item -ItemType SymbolicLink -Value mpv.conf -Path (Join-Path $env:APPDATA "mpv" | Join-Path -ChildPath "mpv.conf") -Force
