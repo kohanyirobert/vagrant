@@ -2,6 +2,8 @@
 
 (set-default-coding-systems 'utf-8)
 
+(global-auto-revert-mode t)
+
 (add-hook 'org-mode-hook 'auto-fill-mode)
 
 (global-set-key (kbd "C-c l") 'org-store-link)
@@ -13,5 +15,5 @@
 (setq org-refile-targets '((org-agenda-files :maxlevel . 1)
 			   (nil :maxlevel . 1)))
 (setq org-log-done 'note)
-(setq org-log-into-drawer 't)
+(setq org-log-into-drawer t)
 (setq org-adapt-indentation nil)
