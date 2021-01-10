@@ -25,6 +25,8 @@ function Ssh-Switch-Key {
 }
 Import-Module posh-ssh
 Import-Module posh-git
+$GitPromptSettings.DefaultPromptWriteStatusFirst = $true
+$GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
 Try-Enable-Docker-Toolbox
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadlineKeyHandler -Key Ctrl+v -Function Paste
