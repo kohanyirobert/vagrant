@@ -2,6 +2,7 @@
 
 (set-default-coding-systems 'utf-8)
 
+(desktop-save-mode t)
 (global-auto-revert-mode t)
 
 (add-hook 'org-mode-hook 'auto-fill-mode)
