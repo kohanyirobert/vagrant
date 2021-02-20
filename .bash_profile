@@ -1,4 +1,3 @@
-export PATH="/c/Program Files/OpenSSH-Win64:$PATH"
 export HISTCONTROL=ignoreboth:erasedups
 alias ssh-copy-id-password-only='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias ssh-password-only='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
